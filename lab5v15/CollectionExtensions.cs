@@ -5,7 +5,7 @@ using System.Linq;
 
 public static class CollectionExtensions
 {
-    // T TopN<T>(IEnumerable<T>, int, Func<T,double>)
+
     // Узагальнений метод для вибору N елементів, що мають найбільше значення за заданим критерієм.
     public static IEnumerable<T> TopNByValue<T>(
         this IEnumerable<T> source, 
