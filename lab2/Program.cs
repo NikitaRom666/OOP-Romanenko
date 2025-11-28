@@ -16,6 +16,7 @@ class Program
         Polynomial sum = p1 + p2;
 
         Console.WriteLine("Polynomial 1: " + p1);
+    
         Console.WriteLine("Polynomial 2: " + p2);
         Console.WriteLine("Sum: " + sum);
     }
