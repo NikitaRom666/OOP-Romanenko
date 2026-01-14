@@ -100,12 +100,12 @@ namespace lab20
             );
 
             // Спроба обробити правильне замовлення
-            var validOrder = new Order(101, "Микита Романенко", 1250.50m);
+            var validOrder = new Order(101, "Нікіта Романенко", 1250.50m);
             service.ProcessOrder(validOrder);
 
             Console.WriteLine();
 
-            // Спроба обробити помилкове замовлення
+        
             var invalidOrder = new Order(102, "Тестовий Клієнт", -50);
             service.ProcessOrder(invalidOrder);
 
