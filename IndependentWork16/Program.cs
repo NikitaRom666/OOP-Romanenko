@@ -2,7 +2,7 @@
 
 #region BAD VERSION (порушення SRP)
 
-// ❌ Поганий клас: робить ВСЕ
+//  Поганий клас: робить ВСЕ
 public class BadAuthService
 {
     public void Login(string username, string password)
