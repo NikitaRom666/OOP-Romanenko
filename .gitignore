@@ -1,5 +1,19 @@
-﻿bin/
+﻿# Directories
+bin/
 obj/
 .vs/
 .vscode/
+
+# User-specific files
 *.user
+*.userprefs
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
