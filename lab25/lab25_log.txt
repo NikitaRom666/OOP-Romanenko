@@ -1,0 +1,6 @@
+[FileLogger] 2026-02-18 19:52:08 - Дані оброблено стратегією 'Encrypt': VGVzdCBEYXRhIGZvciBGaWxlIExvZ2dlcg==
+[FileLogger] 2026-02-18 19:52:08 - Дані оброблено стратегією 'Compress': A4B3C4D3
+[FileLogger] 2026-02-18 19:53:49 - Дані оброблено стратегією 'Encrypt': VGVzdCBEYXRhIGZvciBGaWxlIExvZ2dlcg==
+[FileLogger] 2026-02-18 19:53:49 - Дані оброблено стратегією 'Compress': A4B3C4D3
+[FileLogger] 2026-02-18 19:55:13 - Дані оброблено стратегією 'Encrypt': VGVzdCBEYXRhIGZvciBGaWxlIExvZ2dlcg==
+[FileLogger] 2026-02-18 19:55:13 - Дані оброблено стратегією 'Compress': A4B3C4D3
