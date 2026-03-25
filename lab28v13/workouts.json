@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "Title": "Morning Strength",
+    "Date": "2026-03-25T00:00:00+02:00",
+    "TrainerName": "Alex",
+    "Exercises": [
+      {
+        "Id": 1,
+        "Name": "Push-up",
+        "Description": "Standard push-up",
+        "TargetMuscle": "Chest",
+        "DurationSeconds": 60,
+        "CaloriesBurned": 15
+      },
+      {
+        "Id": 2,
+        "Name": "Pull-up",
+        "Description": "Standard pull-up",
+        "TargetMuscle": "Back",
+        "DurationSeconds": 60,
+        "CaloriesBurned": 12
+      },
+      {
+        "Id": 3,
+        "Name": "Plank",
+        "Description": "Core plank",
+        "TargetMuscle": "Core",
+        "DurationSeconds": 90,
+        "CaloriesBurned": 8
+      }
+    ],
+    "TotalCalories": 35,
+    "TotalDurationSeconds": 210
+  },
+  {
+    "Id": 2,
+    "Title": "Cardio Day",
+    "Date": "2026-03-26T00:00:00+02:00",
+    "TrainerName": "Maria",
+    "Exercises": [
+      {
+        "Id": 4,
+        "Name": "Running",
+        "Description": "30 min cardio run",
+        "TargetMuscle": "Cardio",
+        "DurationSeconds": 1800,
+        "CaloriesBurned": 250
+      },
+      {
+        "Id": 5,
+        "Name": "Jump rope",
+        "Description": "Jump rope cardio",
+        "TargetMuscle": "Cardio",
+        "DurationSeconds": 600,
+        "CaloriesBurned": 80
+      }
+    ],
+    "TotalCalories": 330,
+    "TotalDurationSeconds": 2400
+  }
+]
