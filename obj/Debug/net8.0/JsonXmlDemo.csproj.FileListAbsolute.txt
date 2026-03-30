@@ -1,0 +1,15 @@
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\bin\Debug\net8.0\JsonXmlDemo.exe
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\bin\Debug\net8.0\JsonXmlDemo.deps.json
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\bin\Debug\net8.0\JsonXmlDemo.runtimeconfig.json
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\bin\Debug\net8.0\JsonXmlDemo.dll
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\bin\Debug\net8.0\JsonXmlDemo.pdb
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.AssemblyInfoInputs.cache
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.AssemblyInfo.cs
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.csproj.CoreCompileInputs.cache
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.sourcelink.json
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.dll
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\refint\JsonXmlDemo.dll
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.pdb
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\JsonXmlDemo.genruntimeconfig.cache
+C:\Users\strey\Desktop\szx\OOP-Romanenko\JsonXmlDemo\obj\Debug\net8.0\ref\JsonXmlDemo.dll
