@@ -1,81 +1,97 @@
-﻿using Xunit;
 using lab30v13;
-using System;
 
-namespace lab30v13.Tests
+namespace lab30v13.Tests;
+
+public class CurrencyConverterTests
 {
-    public class CurrencyConverterTests
+    private readonly CurrencyConverter _converter = new();
+
+    [Fact]
+    public void GetRate_USD_ReturnsOne()
     {
-        private readonly CurrencyConverter converter = new CurrencyConverter();
+        decimal rate = _converter.GetRate("USD");
+        Assert.Equal(1.0m, rate);
+    }
 
-        [Fact]
-        public void GetRate_USD_Returns1()
-        {
-            Assert.Equal(1m, converter.GetRate("USD"));
-        }
+    [Fact]
+    public void GetRate_CaseInsensitive_ReturnsRate()
+    {
+        decimal lower = _converter.GetRate("eur");
+        decimal upper = _converter.GetRate("EUR");
+        Assert.Equal(upper, lower);
+    }
 
-        [Fact]
-        public void GetRate_UnknownCurrency_Throws()
-        {
-            Assert.Throws<ArgumentException>(() => converter.GetRate("XYZ"));
-        }
+    [Fact]
+    public void GetRate_UnsupportedCurrency_ThrowsKeyNotFoundException()
+    {
+        Assert.Throws<KeyNotFoundException>(() => _converter.GetRate("XYZ"));
+    }
 
-        [Theory]
-        [InlineData(100, "USD", "EUR", 93)]
-        [InlineData(100, "EUR", "USD", 107.526882)]
-        [InlineData(100, "UAH", "USD", 2.710027)]
-        [InlineData(100, "GBP", "UAH", 4555.555556)]
-        public void Convert_ValidCurrencies_ReturnsExpected(decimal amount, string from, string to, decimal expected)
-        {
-            decimal result = converter.Convert(amount, from, to);
-            Assert.Equal(Math.Round(expected,6), Math.Round(result,6));
-        }
+    [Fact]
+    public void GetRate_NullCurrency_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => _converter.GetRate(null!));
+    }
 
-        [Fact]
-        public void Convert_UnknownCurrency_Throws()
-        {
-            Assert.Throws<ArgumentException>(() => converter.Convert(100, "USD", "XYZ"));
-        }
+    [Fact]
+    public void GetRate_EmptyString_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => _converter.GetRate(""));
+    }
 
-        [Fact]
-        public void Convert_SameCurrency_ReturnsSameAmount()
-        {
-            decimal amount = 123.45m;
-            decimal result = converter.Convert(amount, "USD", "USD");
-            Assert.Equal(amount, result);
-        }
+    [Fact]
+    public void Convert_SameCurrency_ReturnsSameAmount()
+    {
+        decimal result = _converter.Convert(100m, "USD", "USD");
+        Assert.Equal(100.00m, result);
+    }
 
-        [Theory]
-        [InlineData(0, "USD", "EUR")]
-        [InlineData(0, "EUR", "USD")]
-        public void Convert_ZeroAmount_ReturnsZero(decimal amount, string from, string to)
-        {
-            decimal result = converter.Convert(amount, from, to);
-            Assert.Equal(0m, result);
-        }
+    [Fact]
+    public void Convert_NegativeAmount_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => _converter.Convert(-50m, "USD", "EUR"));
+    }
 
-        [Fact]
-        public void GetRate_AllCurrencies_ReturnsCorrectRates()
-        {
-            Assert.Equal(1m, converter.GetRate("USD"));
-            Assert.Equal(0.93m, converter.GetRate("EUR"));
-            Assert.Equal(36.9m, converter.GetRate("UAH"));
-            Assert.Equal(0.81m, converter.GetRate("GBP"));
-        }
+    [Fact]
+    public void Convert_ZeroAmount_ReturnsZero()
+    {
+        decimal result = _converter.Convert(0m, "USD", "UAH");
+        Assert.Equal(0.00m, result);
+    }
 
-        [Theory]
-        [InlineData(50, "EUR", "GBP")]
-        [InlineData(100, "GBP", "EUR")]
-        public void Convert_MultipleConversions(decimal amount, string from, string to)
-        {
-            decimal result = converter.Convert(amount, from, to);
-            Assert.True(result > 0);
-        }
+    [Fact]
+    public void IsSupportedCurrency_KnownCode_ReturnsTrue()
+    {
+        Assert.True(_converter.IsSupportedCurrency("UAH"));
+    }
 
-        [Fact]
-        public void Convert_NegativeAmount_Throws()
-        {
-            Assert.Throws<ArgumentException>(() => converter.Convert(-100, "USD", "EUR"));
-        }
+    [Fact]
+    public void IsSupportedCurrency_UnknownCode_ReturnsFalse()
+    {
+        Assert.False(_converter.IsSupportedCurrency("ABC"));
+    }
+
+    [Theory]
+    [InlineData("USD", 1.0)]
+    [InlineData("EUR", 0.92)]
+    [InlineData("UAH", 41.5)]
+    [InlineData("GBP", 0.79)]
+    [InlineData("PLN", 4.02)]
+    public void GetRate_SupportedCurrencies_ReturnsExpectedRate(string code, double expected)
+    {
+        decimal rate = _converter.GetRate(code);
+        Assert.Equal((decimal)expected, rate);
+    }
+
+    [Theory]
+    [InlineData(100,  "USD", "EUR",  92.00)]
+    [InlineData(100,  "EUR", "USD", 108.70)]
+    [InlineData(1000, "UAH", "USD",  24.10)]
+    [InlineData(50,   "GBP", "USD",  63.29)]
+    public void Convert_ValidAmounts_ReturnsExpectedResult(
+        double amount, string from, string to, double expected)
+    {
+        decimal result = _converter.Convert((decimal)amount, from, to);
+        Assert.Equal((decimal)expected, result);
     }
 }
