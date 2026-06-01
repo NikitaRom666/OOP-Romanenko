@@ -1,37 +1,37 @@
-# Companion texts for Lab39 (copy/paste into GitHub UI)
+# Тексти для Lab39 (скопіюйте/вставте у GitHub UI)
 
-## Issues (copy each as a new issue)
+## Issues (створіть кожен як новий Issue)
 
-### Issue 1 — Add CSV export for order history (label: enhancement)
-Title: Add CSV export for order history
+### Issue 1 — Додати CSV-експорт історії замовлень (label: enhancement)
+Title: Додати CSV-експорт історії замовлень
 
 Body:
 ```
 Опис:
 Додати можливість експортувати замовлення у CSV формат.
 
-Acceptance Criteria:
+Критерії прийняття:
 - [ ] Реалізовано CsvExportService
 - [ ] Метод повертає коректний CSV рядок
 - [ ] Написано unit‑тест
 ```
 
-### Issue 2 — Add pagination to product list (label: enhancement)
-Title: Add pagination to product list
+### Issue 2 — Додати пагінацію для списку продуктів (label: enhancement)
+Title: Додати пагінацію для списку продуктів
 
 Body:
 ```
 Опис:
 Додати підтримку пагінації для списків сутностей.
 
-Acceptance Criteria:
+Критерії прийняття:
 - [ ] Реалізовано PaginationService<T>
 - [ ] Повертає PagedResult з TotalPages
 - [ ] Написано unit‑тест
 ```
 
-### Issue 3 — NullReferenceException in OrderService.GetById (label: bug)
-Title: NullReferenceException in OrderService.GetById
+### Issue 3 — NullReferenceException в OrderService.GetById (label: bug)
+Title: NullReferenceException в OrderService.GetById
 
 Body:
 ```
@@ -42,97 +42,97 @@ Body:
 1. Викликати GetById з неіснуючим Id
 2. Отримати NullReferenceException
 
-Acceptance Criteria:
+Критерії прийняття:
 - [ ] Метод повертає null при відсутності запису
 - [ ] Додано тест
 ```
 
-### Issue 4 — Extract IOrderRepository interface (label: refactor)
-Title: Extract IOrderRepository interface
+### Issue 4 — Виокремити інтерфейс IOrderRepository (label: refactor)
+Title: Виокремити інтерфейс IOrderRepository
 
 Body:
 ```
 Опис:
 Виокремити інтерфейс IOrderRepository для дотримання DIP.
 
-Acceptance Criteria:
+Критерії прийняття:
 - [ ] Створено IOrderRepository
 - [ ] OrderRepository реалізує інтерфейс
 - [ ] Залежності в коді через інтерфейс
 ```
 
-## PR bodies (copy into PR description)
+## Тіла для PR (вставте у поле опису PR)
 
-### PR for feature/add-pagination
+### PR для feature/add-pagination
 ```
-## Summary
+## Коротко
 Додано сервіс пагінації для списків.
 
-## Related Issue
+## Пов'язане Issue
 Closes #2
 
-## Changes
+## Зміни
 - `Lab39/Services/PaginationService.cs` — генерик‑сервіс PagedResult
 
-## Checklist
+## Чек‑лист
 - [x] Код компілюється без warnings
 - [x] Тести проходять
 - [x] Commit messages відповідають Conventional Commits
 ```
 
-### PR for conflict/branch-b
+### PR для conflict/branch-b
 ```
-## Summary
+## Коротко
 Вирішено конфлікт і додано комбіновану версію GetStatus.
 
-## Related Issue
+## Пов'язане Issue
 Closes #6
 
-## Changes
+## Зміни
 - `Lab39/Services/ConflictDemo.cs` — GetStatus повертає "Active with logging and caching"
 
-## Checklist
+## Чек‑лист
 - [x] Код компілюється без warnings
 - [x] Тести проходять
 - [x] Commit messages відповідають Conventional Commits
 ```
 
-### PR #2 (fix/null-reference-order-service) body
+### PR #2 (fix/null-reference-order-service) — опис
 ```
-## Summary
+## Коротко
 Виправлено NullReferenceException в OrderService.GetById.
 
-## Related Issue
+## Пов'язане Issue
 Closes #3
 
-## Changes
+## Зміни
 - `Lab39/Services/OrderService.cs` — GetById повертає null замість throw
 
-## Checklist
+## Чек‑лист
 - [x] Код компілюється без warnings
 - [x] Тести проходять
 - [x] Commit messages відповідають Conventional Commits
 ```
 
-### PR #3 (refactor/extract-order-repository) body
+### PR #3 (refactor/extract-order-repository) — опис
 ```
-## Summary
+## Коротко
 Виокремлено IOrderRepository для дотримання принципу DIP.
 
-## Related Issue
+## Пов'язане Issue
 Closes #4
 
-## Changes
+## Зміни
 - `Lab39/Services/IOrderRepository.cs` — інтерфейс
 - `Lab39/Services/OrderRepository.cs` — реалізація
 
-## Checklist
+## Чек‑лист
 - [x] Код компілюється без warnings
 - [x] Тести проходять
 - [x] Commit messages відповідають Conventional Commits
 ```
 
-## Example review comments (copy to Files changed → comment)
+## Приклади коментарів для рев'ю (скопіюйте у Files changed → comment)
 
 Suggestion:
 ```

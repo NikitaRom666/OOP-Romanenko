@@ -1,10 +1,9 @@
-# Lab39 — Final Report
 
-Repository: https://github.com/NikitaRom666/OOP-Romanenko
+# Лабораторна робота №39 — Підсумковий звіт
 
-Summary of actions performed locally and pushed to origin/main:
+Короткий опис виконаних дій, виконаних локально та запушених у `origin/main`:
 
-- Created and pushed feature branches:
+- Створено та запушено гілки:
   - feature/add-csv-export
   - feature/add-pagination
   - fix/null-reference-order-service
@@ -12,7 +11,7 @@ Summary of actions performed locally and pushed to origin/main:
   - conflict/branch-a
   - conflict/branch-b
 
-- Added files under `Lab39/Services/` (pushed to `main`):
+- Додано файли в `Lab39/Services/` (пуш на `main`):
   - Lab39/Services/CsvExportService.cs
   - Lab39/Services/PaginationService.cs
   - Lab39/Services/OrderService.cs
@@ -20,35 +19,34 @@ Summary of actions performed locally and pushed to origin/main:
   - Lab39/Services/OrderRepository.cs
   - Lab39/Services/ConflictDemo.cs
 
-- Added repository documentation:
+- Додано файли документації у репозиторій:
   - CONTRIBUTING.md
   - .github/PULL_REQUEST_TEMPLATE.md
   - .github/ISSUE_TEMPLATE/bug_report.md
   - .github/ISSUE_TEMPLATE/feature_request.md
 
-Status (what is done on GitHub):
+Статус на GitHub (на момент перевірки):
 
-- Branches: all listed branches are present on origin.
-- Files: `Lab39/Services` files and `.github` templates are present on `main`.
-- PRs: some PRs were created earlier (check Pull Requests tab). Two PRs were open at the time of verification (fix/null-reference-order-service and refactor/extract-order-repository).
-- Issues: none were created by me on GitHub (Issues must be created in the web UI or via authenticated API). Please create the 4 Issues listed in the lab instructions (texts provided in companion file below).
+- Гілки: усі перелічені гілки присутні в `origin`.
+- Файли: файли в `Lab39/Services` та шаблони у `.github` присутні в `main`.
+- Pull Requests: у репозиторії є відкриті PR (перевірте вкладку Pull Requests). Декілька PR відкривались/мерджились у процесі роботи.
+- Issues: я не створював Issues через ваш акаунт — їх потрібно створити через веб‑інтерфейс або через автентифікований API. Тексти для Issues надані у файлі супроводу нижче.
 
-What I committed to the repo (direct links):
+Що додано у репозиторій (посилання):
 
-- Repo root: https://github.com/NikitaRom666/OOP-Romanenko
-- Lab39 services folder: https://github.com/NikitaRom666/OOP-Romanenko/tree/main/Lab39/Services
+- Папка з сервісами: https://github.com/NikitaRom666/OOP-Romanenko/tree/main/Lab39/Services
 - CONTRIBUTING.md: https://github.com/NikitaRom666/OOP-Romanenko/blob/main/CONTRIBUTING.md
-- PR template: https://github.com/NikitaRom666/OOP-Romanenko/blob/main/.github/PULL_REQUEST_TEMPLATE.md
-- Issue templates: https://github.com/NikitaRom666/OOP-Romanenko/tree/main/.github/ISSUE_TEMPLATE
+- Шаблон PR: https://github.com/NikitaRom666/OOP-Romanenko/blob/main/.github/PULL_REQUEST_TEMPLATE.md
+- Шаблони Issue: https://github.com/NikitaRom666/OOP-Romanenko/tree/main/.github/ISSUE_TEMPLATE
 
-Notes and recommendations to finish the lab (manual steps to perform on GitHub):
+Рекомендації для завершення лабораторної (ручні кроки на GitHub):
 
-1. Create 4 Issues (enhancement x2, bug x1, refactor x1) using the provided texts.
-2. Create PR for `feature/add-pagination` and `conflict/branch-b` via GitHub Compare UI and paste the prepared PR descriptions.
-3. Edit PR descriptions for opened PRs (fix/null-reference-order-service and refactor/extract-order-repository) to include `Closes #N` references to the created Issues.
-4. Request a real reviewer (classmate or instructor) to make at least 3 review comments (suggestion, question, nitpick). When approved, merge PRs.
-5. Optionally enable Branch Protection for `main` in repository Settings.
+1. Створити 4 Issues (enhancement ×2, bug ×1, refactor ×1) за підготовленими текстами.
+2. Створити PR для `feature/add-pagination` та `conflict/branch-b` через GitHub Compare UI і вставити підготовлені описи PR.
+3. Відредагувати описи відкритих PR (fix/null-reference-order-service та refactor/extract-order-repository), додати `Closes #N` зі створених Issues.
+4. Призначити реального рецензента (одногрупник або викладач) для отримання щонайменше 3 коментарів (suggestion, question, nitpick). Після Approve — змерджити PR.
+5. За потреби увімкнути Branch Protection для `main` у Settings репозиторію.
 
-Prepared texts for Issues and PR bodies are available in Lab39/COMPANION_TEXTS.md for copy/paste.
+Готові тексти для Issues та PR знаходяться у Lab39/COMPANION_TEXTS.md для швидкого копіювання.
 
-Report generated and pushed by automation (local assistant) as a consolidation of lab activities. Please review the PRs and create the Issues in the web UI to complete the lab.
+Цей звіт згенеровано і запушено як підсумок виконаних дій. Будь ласка, перевірте відкриті PR і створіть Issues у веб‑інтерфейсі, щоб повністю завершити лабораторну роботу.
