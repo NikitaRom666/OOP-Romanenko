@@ -3,5 +3,5 @@
 public class ConflictDemo
 {
     // Версія з логуванням і кешуванням
-    public string GetStatus() =>  Active with logging and caching;
+    public string GetStatus() => "Active with logging and caching";
 }
