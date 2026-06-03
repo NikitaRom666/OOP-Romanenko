@@ -1,0 +1,49 @@
+﻿name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        dotnet-version: ['8.0.x', '9.0.x']
+      fail-fast: false
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET SDK ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+        cache: true
+        cache-dependency-path: '**/packages.lock.json'
+
+    - name: Restore dependencies
+      run: dotnet restore UnitTestingDemo.sln
+
+    - name: Check code formatting
+      run: dotnet format UnitTestingDemo.sln --verify-no-changes --verbosity diagnostic
+
+    - name: Build project (Warnings as Errors)
+      run: dotnet build UnitTestingDemo.sln --no-restore --configuration Release -warnaserror
+
+    - name: Test with cross-platform code coverage
+      run: >
+        dotnet test UnitTestingDemo.sln --no-build --configuration Release
+        --collect:"XPlat Code Coverage"
+        --results-directory ./coverage
+
+    - name: Upload coverage report artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report-${{ matrix.os }}-${{ matrix.dotnet-version }}
+        path: coverage/**/coverage.cobertura.xml
+        retention-days: 14
